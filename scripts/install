@@ -198,6 +198,7 @@ sudo cp ../conf/"$app".service /etc/systemd/system/
 ynh_replace_string "__PATH__" "$final_path" "/etc/systemd/system/$app.service"
 ynh_replace_string "__NODEJS__" "$nodejs_use_version" "/etc/systemd/system/$app.service"
 ynh_replace_string "__ENV_PATH__" "$PATH" "/etc/systemd/system/$app.service"
+ynh_replace_string "__NODEPATH__" "$nodejs_path" "/etc/systemd/system/$app.service"
 sudo systemctl daemon-reload
 
 sudo systemctl enable "$app".service

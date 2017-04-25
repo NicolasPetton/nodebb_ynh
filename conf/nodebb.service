@@ -12,8 +12,10 @@ StandardError=syslog
 SyslogIdentifier=nodebb
 
 Environment=NODE_ENV=production
+ExecStartPre=__NODEJS__
+Environment="PATH=__ENV_PATH__"
 WorkingDirectory=__PATH__
-ExecStart=/usr/bin/node loader.js --no-daemon --no-silent
+ExecStart=__NODEPATH__/node loader.js --no-daemon --no-silent
 Restart=always
 
 [Install]

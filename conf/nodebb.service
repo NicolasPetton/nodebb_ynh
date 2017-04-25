@@ -12,7 +12,7 @@ StandardError=syslog
 SyslogIdentifier=nodebb
 
 Environment=NODE_ENV=production
-WorkingDirectory=/var/www/nodebb
+WorkingDirectory=__PATH__
 ExecStart=/usr/bin/node loader.js --no-daemon --no-silent
 Restart=always
 
